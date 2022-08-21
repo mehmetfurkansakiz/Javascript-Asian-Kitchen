@@ -124,15 +124,11 @@ const createFoods = (food) => {
   `
 return html
 }
-// list all menu when site opens
-/////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", listAllFoods)
-/////////////////////////////////////////////////////////
 
 //////////////// ALL
 const listAllFoods = () => {
   let allFoods= ""
-
+  
   menu.map(item => {
     allFoods += createFoods(item)
   })
@@ -140,6 +136,10 @@ const listAllFoods = () => {
 }
 document.querySelector("#all").addEventListener("click",listAllFoods)
 
+// list all menu when site opens
+/////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", listAllFoods)
+/////////////////////////////////////////////////////////
 
 //////////////// KOREA
 const listKoreaFoods = () => {
@@ -157,7 +157,7 @@ document.querySelector("#korea").addEventListener("click", listKoreaFoods)
 //////////////// JAPAN
 const listJapanFoods = () => {
   let japanFoods = ""
-
+  
   menu.map(item => {
     if(item.category === "Japan"){
       japanFoods += createFoods(item) 
