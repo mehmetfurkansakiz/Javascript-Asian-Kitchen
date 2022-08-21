@@ -124,6 +124,10 @@ const createFoods = (food) => {
   `
 return html
 }
+// list all menu when site opens
+/////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", listAllFoods)
+/////////////////////////////////////////////////////////
 
 //////////////// ALL
 const listAllFoods = () => {
@@ -136,9 +140,6 @@ const listAllFoods = () => {
 }
 document.querySelector("#all").addEventListener("click",listAllFoods)
 
-/////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", listAllFoods)
-/////////////////////////////////////////////////////////
 
 //////////////// KOREA
 const listKoreaFoods = () => {
